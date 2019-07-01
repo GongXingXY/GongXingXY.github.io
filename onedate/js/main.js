@@ -1,4 +1,3 @@
-
 let canvas = document.querySelector("canvas");
 ctx = canvas.getContext("2d");
 let ww, wh;
