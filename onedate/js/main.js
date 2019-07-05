@@ -99,7 +99,7 @@ function time(obj, futimg) {
     let msec = nowtime - futruetime; // 毫秒 未来时间-现在时间
     let time = (msec / 1000); // 毫秒/1000 
     let day = parseInt(time / 86400); // 天 24*60*60*1000 
-    let hour = parseInt(time / 3600) - 12 * day; // 小时 60*60 总小时数-过去的小时数=现在的小时数 
+    let hour = parseInt(time / 3600) - 24 * day; // 小时 60*60 总小时数-过去的小时数=现在的小时数 
     let minute = parseInt(time % 3600 / 60); // 分 -(day*24) 以60秒为一整份 取余 剩下秒数 秒数/60 就是分钟数 
     let second = parseInt(time % 60); // 以60秒为一整份 取余 剩下秒数 
     obj.innerHTML = day + " day" + hour + ":" +
