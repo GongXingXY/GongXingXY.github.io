@@ -1,7 +1,7 @@
 body {
     overflow: hidden;
     margin: 0;
-    background-image:url("https://cdn.nlark.com/yuque/0/2019/jpeg/214075/1561972239102-24e32552-5b40-4661-b3d6-5a3f9251422a.jpeg")
+    background-image:url("https://www.cnblogs.com/images/cnblogs_com/gxunique/1495996/o_back.png")
 }
 
 h1 {
@@ -11,7 +11,7 @@ h1 {
     width: 100%;
     text-align: center;
     transform: translateY(-50%);
-    font-size: 60px;
-    color:#07000a;
+    font-size: 30px;
+    color:#e9520c;
     padding: 0 20px;
 }
