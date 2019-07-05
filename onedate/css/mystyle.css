@@ -12,6 +12,10 @@ h1 {
     text-align: center;
     transform: translateY(-50%);
     font-size: 30px;
+<<<<<<< HEAD
     color:#e9520c;
+=======
+    color:#07000a;
+>>>>>>> 7f4860beb2c73f6504fa560e270ad5224796f171
     padding: 0 20px;
 }
