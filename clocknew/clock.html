@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./picture/time.png" type="image/x-icon">
+    <title>Time</title>
+    <!-- 两种css主题 -->
+    <link rel="stylesheet" href="./css/style.css" title="a">
+    <link rel="alternate stylesheet" href="./css/stylepro.css" title="b">
+    
+</head>
+<body>
+
+    <!-- 主题切换 -->
+
+    <div class="stylebutton">
+        <a href="javascript:void(0)" style="--i: 1" id = "Dark" value = "Dark" class="a1">Dark</a>
+        <a href="javascript:void(0)" style="--i: 2" id = "Suni" value = "Sun" class="a2">Light</a>
+    </div>
+
+
+    <!-- 数字时钟-->
+    <div class="textclock">
+        <h1 class="textyear" id="year"></h1>
+        <h1 id="time"></h1>
+        <h1 class="textss" id="second"></h1>
+    </div>
+
+    <!--玻璃拟态时钟-->
+    <div class="container">
+        <div class="box">
+            <div class="clock">
+
+                <div class="hour">
+                    <div class="hr" id="hr"> </div>
+                </div>
+
+                <div class="min">
+                    <div class="mn" id="mn"></div>      
+                </div>
+
+            <div class="sec">
+                <div class="sc" id="sc"> </div>
+            </div>
+           
+    </div>
+    <script src="./js/script.js"></script>
+
+</body>
+</html>

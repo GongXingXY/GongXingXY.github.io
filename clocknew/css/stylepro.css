@@ -1,0 +1,268 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* background: url(../picture/background.png) no-repeat center center fixed;
+    background-size: cover; */
+
+}
+
+body::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,#d898ae,#e22564 50%, #ec4dca 50%, #f8f401);
+
+
+}
+
+body::after
+{
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(160deg,#36b3ec,#36b3ec 50%, transparent 50%,transparent);
+    animation: alternate 5s ease-in-out infinite;
+} 
+
+
+
+@keyframes animate 
+{
+    0%,100%
+    {
+        transform: translateY(10px);
+    }
+    50%
+    {
+        transform: translateY(-10px);
+    }
+}
+
+.container
+{
+    position: relative;
+
+}
+.container::before
+{
+    content: '';
+    position: relative;
+    bottom: -150px;
+    width: 100%;
+    height: 60px;
+    background: radial-gradient(rgba(0,0,0,0.2),
+    transparent,transparent);
+    border-radius: 50%;
+
+}
+
+
+.box
+{
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    height: 400px;
+    backdrop-filter: blur(25px);
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,0.5);
+    animation: animate 5s ease-in-out infinite;
+    animation-delay: -2.5s;
+}
+
+.clock{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: radial-gradient(transparent, rgba(255, 255, 255,0.2)), url(../picture/clock.png);
+    background-size: cover;
+    border-radius: 50%;
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+    border-right: none;
+    box-shadow: -10px -10px 20px rgb(255, 255, 255,0.1),
+    10px 10px 20px rgba(0, 0, 0,0.1),
+    0px 40px 50px rgb(0, 0, 0,0.2);
+}
+.textclock{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10px;
+    width: 1100px;
+    height: 150px;
+    backdrop-filter: blur(25px);
+    border-radius: 15px;
+    border: 2px solid #fff;
+    z-index: 100;
+    color: #fff;
+    font-size: 25px; 
+    box-shadow: -10px -10px 20px rgb(255, 255, 255,0.1),
+    10px 10px 20px rgba(0, 0, 0,0.1),
+    0px 40px 50px rgb(0, 0, 0,0.2);
+}
+
+
+.stylebutton{
+    position: absolute;
+    top: 50px;
+    left: 30px;
+    z-index: 10000;
+
+}
+
+.a2 {
+    box-shadow: 
+    0px 10px 50px rgb(102, 255, 0),
+    -20px -10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.stylebutton a {
+	/* 相对定位 子绝父相 */
+    position: relative;
+	width: 200px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	margin: 10px;
+	font-size: 30px;
+	color: #7f8;
+	/* 这个是取消文字下划线 */
+	text-decoration: none;
+	border: 5px solid #7f8;
+	/* 接下来就是四个盒子的颜色了 */
+	/* 刚才定义--i这个属性值可以通过var函数来调用 */
+	/* 刷一下就变了 哈哈 这块calc方法可以自动计算 var函数调用了刚刚我们给a设置的1-4这四个属性值,然后分别计算出了一个度数 hue-rotate这个属性是颜色滤镜 可以添加 不同的度数来改变颜色 最大值360deg 最小是就是0 原来的颜色 */
+	filter: hue-rotate(calc(var(--i) * 90deg));
+}
+.stylebutton a::before,
+.stylebutton a::after {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 5px;
+	background-color: #06792c;
+	/* 这个属性是倾斜 写了一个值就表示在水平方向的倾斜 和skewX是一样的 */
+	transform: skew(50deg);
+	/* 设置一下过渡时间 */
+	transition: all 0.5s;
+}
+.stylebutton a::before {
+	top: -5px;
+	left: 10%;
+}
+.stylebutton a::after {
+	bottom: -5px;
+	right: 10%;
+}
+.stylebutton a:hover::before {
+	left: 80%;
+}
+.stylebutton a:hover::after {
+	right: 80%;
+}
+
+
+
+.textss{
+    animation: animate 2s  infinite;
+    animation-delay: -2.5s; 
+}
+.textyear{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 12px;
+   
+
+
+
+}
+
+
+
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.hour,.min,.sec{
+    position: absolute;
+}
+
+.hour, .hr {
+    width: 160px;
+    height: 160px;
+}
+
+.min, .mn {
+    width: 190px;
+    height: 190px;
+}
+.sec, .sc {
+    width: 230px;
+    height: 230px;
+}
+.hr,.mn,.sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 90px;
+    background: #fff;
+    z-index: 11;
+    border-radius: 6px;
+}
+
+.mn::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px;
+}
+
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 150px;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px;
+}
